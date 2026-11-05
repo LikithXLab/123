@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Griha Pravesha Invitation</title>
+<meta property="og:title" content="You’re invited to our Griha Pravesha">
+<meta property="og:description" content="A new home, a new beginning. Join us for the house-warming ceremony.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+:root{--teak:#2a150b;--teak2:#4a2812;--gold:#e0a63a;--marigold:#f29a14;--kumkum:#b3151f;--cream:#fbf1d9;--ink:#4a2b17;--serif:'Cormorant Garamond',Georgia,serif;--script:'Pinyon Script','Snell Roundhand',cursive}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:var(--serif);background:var(--cream);color:var(--ink);font-size:19px;line-height:1.6;overflow-x:hidden}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* ---------- INTRO ---------- */
+#intro{position:fixed;inset:0;z-index:50;background:radial-gradient(ellipse at 50% 40%,#5a3418,var(--teak) 70%);overflow:hidden;transition:opacity 1s,visibility 1s}
+#intro.gone{opacity:0;visibility:hidden}
+#skip{position:absolute;top:max(14px,env(safe-area-inset-top));right:14px;z-index:9;background:rgba(0,0,0,.35);color:var(--cream);border:1px solid rgba(224,166,58,.5);border-radius:99px;padding:3px 14px;font-size:14px;letter-spacing:.1em}
+.toran{position:absolute;top:0;left:0;right:0;height:88px;z-index:5;
+ background:
+  radial-gradient(circle at 50% 78%,#f6c21c 0 9px,transparent 10px) 0 0/30px 44px repeat-x,
+  radial-gradient(circle at 50% 78%,var(--marigold) 0 9px,transparent 10px) 15px 22px/30px 44px repeat-x,
+  linear-gradient(#2f7a3a,#2f7a3a) 0 0/100% 8px no-repeat}
+.toran::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 14px,#2f7a3a 14px 15px,transparent 15px 30px);height:36px;opacity:.55}
+.door{position:absolute;left:50%;top:14vh;width:min(78vw,360px);height:62vh;transform:translateX(-50%);perspective:1100px;display:flex;border:10px solid #6b3b19;border-bottom:0;border-radius:90px 90px 0 0;background:#1c0d05;box-shadow:0 0 60px rgba(242,154,20,.25)}
+.glow{position:absolute;inset:0;border-radius:80px 80px 0 0;background:radial-gradient(ellipse at 50% 60%,rgba(255,200,90,.85),rgba(255,160,40,.15) 70%)}
+.leaf{position:relative;flex:1;background:linear-gradient(90deg,#7a4220,#5b2f15);transition:transform 1.8s cubic-bezier(.5,0,.2,1);display:grid;grid-template-rows:1fr 1fr 1fr;gap:12px;padding:46px 12px 20px;backface-visibility:hidden}
+.leaf.l{transform-origin:left;border-radius:80px 0 0 0}.leaf.r{transform-origin:right;border-radius:0 80px 0 0}
+.leaf i{border:2px solid rgba(224,166,58,.65);border-radius:8px;background:radial-gradient(circle,rgba(224,166,58,.28) 0 6px,transparent 7px) center/26px 26px}
+.open .leaf.l{transform:rotateY(-105deg)}.open .leaf.r{transform:rotateY(105deg)}
+.lamp{position:absolute;bottom:22vh;width:14px;height:90px;background:linear-gradient(90deg,#8d5c1a,#e0a63a,#8d5c1a);border-radius:6px}
+.lamp::before{content:"";position:absolute;left:50%;top:-22px;width:12px;height:22px;transform:translateX(-50%);background:radial-gradient(ellipse at 50% 80%,#fff3b0,#ff9d1a 60%,transparent 70%);border-radius:50% 50% 40% 40%;animation:flick .25s infinite alternate}
+@keyframes flick{to{transform:translateX(-50%) scale(.88,1.08)}}
+.floor{position:absolute;left:0;right:0;bottom:0;height:27vh;background:linear-gradient(#3a2412,#150a04);perspective:500px}
+.feet{position:absolute;left:50%;bottom:0;width:150px;height:100%;transform:translateX(-50%)}
+.feet svg{position:absolute;width:30px;opacity:0;fill:var(--kumkum);animation:step .5s forwards;animation-play-state:paused}
+.go .feet svg{animation-play-state:running}
+@keyframes step{to{opacity:.95}}
+.hand{position:absolute;left:50%;top:30vh;width:110px;transform:translateX(-50%) rotate(-8deg);fill:#f0b323;opacity:0;filter:blur(1px);transition:opacity 1.6s 3.6s}
+.go .hand{opacity:.9}
+.shrine{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;color:var(--cream);background:radial-gradient(ellipse at 50% 30%,#6b3d17,#1b0d05 75%);opacity:0;visibility:hidden;transition:opacity 1.4s;z-index:7}
+.go .shrine{opacity:1;visibility:visible;transition-delay:5.6s}
+.om{font-size:64px;color:var(--gold);text-shadow:0 0 28px rgba(242,154,20,.9);line-height:1}
+.shrine small{letter-spacing:.3em;font-size:15px;color:var(--gold);margin:14px 0 2px}
+.shrine h1{font-family:var(--script);font-weight:400;font-size:clamp(54px,17vw,84px);line-height:1.05}
+.shrine p{max-width:20em;margin-top:12px;font-size:20px;opacity:.9}
+.shrine .when{margin-top:10px;color:var(--gold);letter-spacing:.14em;font-size:16px}
+.enter{margin-top:28px;background:none;color:var(--cream);border:1px solid var(--gold);border-radius:99px;padding:8px 28px;letter-spacing:.14em;font-size:15px}
+.touch{position:absolute;left:50%;bottom:6vh;transform:translateX(-50%);z-index:8;background:rgba(20,8,2,.55);color:var(--cream);border:1px solid var(--gold);border-radius:99px;padding:12px 34px;font-size:16px;letter-spacing:.16em;text-align:center;animation:pulse 2s infinite;transition:opacity .4s}
+.touch b{display:block;font-family:var(--script);font-weight:400;font-size:26px;letter-spacing:0;color:var(--gold)}
+@keyframes pulse{50%{box-shadow:0 0 0 12px rgba(224,166,58,.12)}}
+.go .touch{opacity:0;pointer-events:none}
+.petal{position:absolute;top:-20px;width:11px;height:15px;background:#fff6e5;border-radius:80% 0 80% 0;opacity:0;z-index:6}
+.go .petal{animation:fall linear infinite}
+@keyframes fall{0%{opacity:.95;transform:translateY(0) rotate(0)}100%{opacity:.8;transform:translateY(110vh) translateX(40px) rotate(540deg)}}
+
+/* ---------- INVITATION ---------- */
+header{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:calc(10px + env(safe-area-inset-top)) 18px 10px;background:rgba(251,241,217,.94);backdrop-filter:blur(6px);font-size:14px;letter-spacing:.22em;color:#8a5a2b}
+#mus{width:32px;height:32px;border-radius:50%;border:1px solid #d9b46a;background:none;color:#8a5a2b;font-size:15px}
+main{max-width:520px;margin:0 auto}
+.hero{position:relative;height:72vh;min-height:420px;display:flex;align-items:flex-end;justify-content:center;background:linear-gradient(#c97b17,#6b3410 55%,var(--teak));overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero .mono{position:absolute;top:18%;left:50%;transform:translateX(-50%);width:170px;height:170px;border-radius:50%;border:2px solid var(--gold);display:grid;place-items:center;font-family:var(--script);font-size:64px;color:var(--cream);box-shadow:0 0 0 8px rgba(224,166,58,.18)}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:45%;background:linear-gradient(transparent,var(--cream))}
+.names{font-family:var(--script);font-size:clamp(50px,15vw,72px);text-align:center;line-height:1.1;margin-top:-30px;position:relative;z-index:2;color:#7a2e12}
+.note{text-align:center;padding:12px 32px 40px}
+h2{font-weight:500;font-size:16px;letter-spacing:.3em;text-align:center;color:#8a5a2b;padding-top:24px}
+.orn{display:block;margin:6px auto 22px;width:150px;height:12px;background:linear-gradient(90deg,transparent,var(--gold) 30% 70%,transparent) center/100% 1px no-repeat;position:relative}
+.orn::after{content:"❖";position:absolute;left:50%;top:-8px;transform:translateX(-50%);padding:0 8px;background:var(--cream);color:var(--gold);font-size:14px}
+.tl{position:relative;margin:0 28px 40px;padding-left:2px}
+.tl::before{content:"";position:absolute;left:50%;top:10px;bottom:10px;width:2px;background:var(--kumkum);opacity:.8}
+.ev{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:30px;padding:16px 0;position:relative}
+.ev .ic{width:96px;height:96px;border-radius:50%;border:2px solid #d9b46a;background:radial-gradient(#fff9e8,#f6e2b5);display:grid;place-items:center;font-size:44px;justify-self:end;box-shadow:0 0 0 5px rgba(217,180,106,.2)}
+.ev .tx{font-size:19px;line-height:1.25}.ev .tx b{display:block;font-weight:600;letter-spacing:.08em;font-size:17px}
+.ev .tx span{color:#8a5a2b}
+.ev::after{content:"❀";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--cream);color:var(--kumkum);font-size:16px;line-height:1}
+.details{background:var(--teak);padding:40px 20px 28px;text-align:center}
+.card{background:var(--cream);border-radius:14px;padding:26px 18px;display:grid;grid-template-columns:1fr 1fr;gap:26px 14px;max-width:420px;margin:0 auto;border:3px double #d9b46a}
+.card div{font-size:18px;line-height:1.3}.card em{display:block;font-style:normal;font-size:26px;margin-bottom:4px}
+.card strong{display:block;font-weight:600;letter-spacing:.2em;font-size:15px;color:#8a5a2b;margin-bottom:4px}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.btn{display:inline-block;text-decoration:none;color:var(--cream);border:1px solid var(--gold);border-radius:99px;padding:9px 26px;letter-spacing:.16em;font-size:15px;background:transparent}
+.btn.fill{background:var(--kumkum);border-color:var(--kumkum)}
+.close{text-align:center;padding:36px 32px calc(48px + env(safe-area-inset-bottom))}
+.close .names{margin-top:6px;font-size:54px}
+@media (prefers-reduced-motion:reduce){.leaf{transition-duration:.01s}.petal,.touch{animation:none}}
+</style>
+</head>
+<body>
+
+<!-- ================= EDIT YOUR DETAILS HERE ================= -->
+<script>
+const CONFIG = {
+  name1: "Ramya",
+  name2: "Rishi",
+  eventTitle: "Griha Pravesha",
+  tagline: "A New Home, A New Beginning, Blessed with Love & Happiness.",
+  dateShort: "11th November ’26",     // title screen + card
+  dateLong:  "Wednesday, 11th November 2026",
+  city: "Bangalore",
+  startTime: "10:00 AM",
+  endNote: "followed by lunch",
+  venueName: "No. 104, HSR Layout",
+  venueAddress: "Sector 2, HSR Layout, Bangalore 560102",
+  mapsQuery: "HSR Layout Sector 2, Bangalore",   // or paste a full Google Maps link in mapsUrl
+  mapsUrl: "",
+  invitationMessage: "With divine blessings and your loving presence, we step into our new home and a new chapter of our lives. Your presence will make this day even more special.",
+  program: [
+    { icon: "🏺", title: "Punyahavachanam", time: "09:15 AM" },
+    { icon: "🏠", title: "Griha Pravesha",  time: "10:00 AM" },
+    { icon: "🔥", title: "Ganapathi Homam", time: "10:45 AM" },
+    { icon: "🪔", title: "Satyanarayana Puja", time: "11:30 AM" },
+    { icon: "🍛", title: "Lunch & Blessings", time: "Followed by lunch" }
+  ],
+  rsvpPhone: "919999999999",           // country code + number, no + or spaces
+  rsvpText: "Hi! We will be attending the Griha Pravesha. 🙏",
+  closing: "May our new home be filled with happiness, health, prosperity and divine blessings today and always.",
+  coupleImage: "assets/couple.jpg",    // optional: drop a photo/illustration here
+  music: "assets/music.mp3"            // optional: drop an mp3 here
+};
+</script>
+<!-- ========================================================== -->
+
+<section id="intro" aria-label="Opening animation">
+  <button id="skip">SKIP</button>
+  <div class="toran"></div>
+  <div class="door"><div class="glow"></div>
+    <div class="leaf l"><i></i><i></i><i></i></div><div class="leaf r"><i></i><i></i><i></i></div>
+  </div>
+  <div class="lamp" style="left:calc(50% - min(39vw,180px) - 34px)"></div>
+  <div class="lamp" style="right:calc(50% - min(39vw,180px) - 34px)"></div>
+  <svg width="0" height="0" style="position:absolute"><defs>
+    <symbol id="foot" viewBox="0 0 30 70"><path d="M7 22c0-12 4-20 9-20s9 8 8 20c-1 12-1 22-3 30-1 8-3 14-6 14s-5-6-6-14C7 44 7 34 7 22z"/><circle cx="6" cy="7" r="3"/><circle cx="12" cy="3" r="2.6"/><circle cx="19" cy="2" r="2.6"/><circle cx="25" cy="5" r="2.6"/></symbol>
+  </defs></svg>
+  <div class="floor"><div class="feet" id="feet"></div></div>
+  <svg class="hand" viewBox="0 0 100 130"><rect x="26" y="60" width="52" height="64" rx="24"/><rect x="8" y="52" width="14" height="40" rx="7" transform="rotate(-24 15 72)"/><rect x="27" y="10" width="13" height="56" rx="6.5"/><rect x="44" y="2" width="13" height="62" rx="6.5"/><rect x="61" y="9" width="13" height="56" rx="6.5"/><rect x="77" y="26" width="12" height="44" rx="6" transform="rotate(10 83 48)"/></svg>
+  <div id="petals"></div>
+  <button class="touch" id="touch"><b>Touch to enter</b>Shubhamastu</button>
+  <div class="shrine">
+    <div class="om">ॐ</div>
+    <small>SHUBHAMASTU</small>
+    <h1 data-t="eventTitle"></h1>
+    <p data-t="tagline"></p>
+    <div class="when"><span data-t="dateShort"></span> • <span data-t="city"></span></div>
+    <button class="enter" id="enter">VIEW INVITATION ⌄</button>
+  </div>
+</section>
+
+<header><span id="hdr"></span><button id="mus" aria-label="Toggle music" hidden>♪</button></header>
+<main>
+  <div class="hero" id="hero"><div class="mono" id="mono"></div></div>
+  <div class="names" id="names"></div>
+  <p class="note" data-t="invitationMessage"></p>
+
+  <h2>AUSPICIOUS PROGRAM</h2><span class="orn"></span>
+  <div class="tl" id="tl"></div>
+
+  <section class="details">
+    <div class="card">
+      <div><em>📅</em><strong>DATE</strong><span data-t="dateShort"></span></div>
+      <div><em>🕙</em><strong>TIME</strong><span data-t="startTime"></span><br><span data-t="endNote"></span></div>
+      <div><em>📍</em><strong>VENUE</strong><span data-t="venueName"></span><br><span data-t="city"></span></div>
+      <div><em>🎁</em><strong>BLESSINGS ONLY</strong>Your blessings are our greatest gift</div>
+    </div>
+    <div class="btns">
+      <a class="btn" id="dir" target="_blank" rel="noopener">DIRECTIONS</a>
+      <a class="btn fill" id="rsvp" target="_blank" rel="noopener">RSVP ON WHATSAPP</a>
+    </div>
+  </section>
+
+  <div class="close"><p data-t="closing"></p><div class="names" id="names2"></div></div>
+</main>
+<audio id="aud" loop></audio>
+
+<script>
+const $ = s => document.querySelector(s), C = CONFIG;
+document.querySelectorAll('[data-t]').forEach(e => e.textContent = C[e.dataset.t]);
+document.title = `${C.eventTitle} · ${C.name1} & ${C.name2}`;
+$('#hdr').textContent = `${C.name1} & ${C.name2}`.toUpperCase();
+$('#names').textContent = $('#names2').textContent = `${C.name1} & ${C.name2}`;
+$('#mono').textContent = C.name1[0] + C.name2[0];
+$('#tl').innerHTML = C.program.map(p => `<div class="ev"><div class="ic">${p.icon}</div><div class="tx"><b>${p.title}</b><span>${p.time}</span></div></div>`).join('');
+$('#dir').href = C.mapsUrl || 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(C.mapsQuery);
+$('#rsvp').href = `https://wa.me/${C.rsvpPhone}?text=${encodeURIComponent(C.rsvpText)}`;
+
+// optional couple image
+if (C.coupleImage) { const im = new Image(); im.alt = `${C.name1} and ${C.name2}`; im.onload = () => { $('#mono').remove(); $('#hero').prepend(im); }; im.src = C.coupleImage; }
+
+// footprints walking in, alternating left/right, getting smaller
+const feet = $('#feet');
+for (let i = 0; i < 6; i++) {
+  const s = 1 - i * 0.11, d = (1.8 + i * 0.45).toFixed(2);
+  feet.insertAdjacentHTML('beforeend', `<svg viewBox="0 0 30 70" style="left:${i%2 ? 90 : 30}px;bottom:${8 + i*13}%;transform:scale(${s}) rotate(${i%2 ? 6 : -6}deg);animation-delay:${d}s"><use href="#foot"/></svg>`);
+}
+// petals
+$('#petals').innerHTML = Array.from({length: 26}, () => `<span class="petal" style="left:${Math.random()*100}%;animation-duration:${4+Math.random()*4}s;animation-delay:${Math.random()*3}s"></span>`).join('');
+
+// sequence
+const intro = $('#intro');
+function start() {
+  intro.classList.add('open', 'go');
+  playMusic();
+}
+function finish() { intro.classList.add('gone'); setTimeout(() => intro.remove(), 1100); }
+$('#touch').onclick = start;
+$('#enter').onclick = finish;
+$('#skip').onclick = () => { finish(); playMusic(); };
+if (matchMedia('(prefers-reduced-motion: reduce)').matches) $('#touch').onclick = () => { intro.classList.add('open','go'); setTimeout(finish, 600); };
+
+// music
+const aud = $('#aud'), mus = $('#mus');
+if (C.music) { aud.src = C.music; mus.hidden = false; aud.onerror = () => mus.hidden = true; }
+function playMusic() { if (C.music) aud.play().then(() => mus.textContent = '♪').catch(() => {}); }
+mus.onclick = () => { if (aud.paused) { aud.play(); mus.style.opacity = 1; } else { aud.pause(); mus.style.opacity = .4; } };
+</script>
+</body>
+</html>
